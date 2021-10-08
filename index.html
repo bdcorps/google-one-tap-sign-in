@@ -21,6 +21,7 @@
       function handleCredentialResponse(response) {
         console.log(response);
         var decoded = jwt_decode(response.credential);
+        document.cookie = "sid="+decoded.email+"; path=/";
         console.log(decoded.email);
       }
     </script>
